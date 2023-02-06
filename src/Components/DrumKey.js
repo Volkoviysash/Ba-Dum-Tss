@@ -7,6 +7,16 @@ function DrumKey(props) {
     audioRef.current.play();
   };
 
+  const handleKeydown = (event) => {
+    if (event.keyCode === props.keyCode) {
+      handleClick();
+    }
+  };
+
+  React.useEffect(() => {
+    document.addEventListener("keydown", handleKeydown);
+  }, []);
+
   return (
     <div>
       <audio
