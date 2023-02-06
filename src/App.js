@@ -1,5 +1,5 @@
 import React from "react";
-import DrumPad from "./Components/DrumPad";
+import DrumKey from "./Components/DrumKey";
 import "./index.css";
 
 function App() {
@@ -45,12 +45,12 @@ function App() {
   return (
     <div className="App">
       <div id="drum-machine">
-        <div id="display">
+        <div id="drum-pad">
           {audioKeys.map((audioKey) => (
-            <DrumPad
+            <DrumKey
               key={audioKey.keyLetter}
               audioKey={audioKey.keyLetter}
-              sound={audioKey.keyLetter}
+              sound={audioKey.audioLink}
             />
           ))}
         </div>
