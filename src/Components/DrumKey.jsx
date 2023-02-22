@@ -1,7 +1,12 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 
 function DrumKey(props) {
+  const [isActive, setIsActive] = useState(false);
   const audioRef = useRef(null);
+
+  const toggleActivity = () => {
+    setIsActive(!isActive);
+  };
 
   const handleClick = () => {
     audioRef.current.play();
@@ -25,7 +30,7 @@ function DrumKey(props) {
         className="clip"
         id={props.audioKey}
       />
-      <button className="drum-key" onClick={handleClick}>
+      <button id="drum-key" className="drum-key" onClick={handleClick}>
         {props.audioKey}
       </button>
     </div>

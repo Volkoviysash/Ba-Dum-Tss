@@ -35,7 +35,8 @@ code {
   margin: 20px;
 }
 
-#drum-machine #drum-pad .drum-key {
+#drum-machine #drum-pad .drum-key,
+.drum-key-active {
   position: relative;
   float: left;
   width: 100px;
@@ -51,7 +52,8 @@ code {
   box-shadow: black 3px 3px 5px;
 }
 
-#drum-machine #drum-pad .drum-key:active {
+#drum-machine #drum-pad .drum-key:active,
+.drum-key-active {
   background-color: rgba(255, 166, 0, 0.725);
 }
 

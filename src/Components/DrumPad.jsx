@@ -7,6 +7,7 @@ function DrumPad({ soundsArray }) {
       {soundsArray.map((audioKey) => (
         <DrumKey
           key={audioKey.keyLetter}
+          trackName={audioKey.trackName}
           keyCode={audioKey.keyCode}
           audioKey={audioKey.keyLetter}
           sound={audioKey.audioLink}
