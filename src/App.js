@@ -130,10 +130,16 @@ function App() {
     smoothPianoKit: audioKeys2,
   };
 
+  const [power, setPower] = useState(true);
   const [volume, setVolume] = useState(1);
   const [soundGroupName, setSoundGroupName] = useState("heaterKit");
   const [sounds, setSounds] = useState(soundsGroup[soundGroupName]);
   const [trackName, setTrackName] = useState("");
+
+  const powerSwitch = () => {
+    setPower(!power);
+    console.log(power);
+  };
 
   const changeSoundGroup = () => {
     setTrackName("");
@@ -160,8 +166,10 @@ function App() {
   return (
     <div className="App">
       <div id="drum-machine">
-        <DrumPad soundsArray={sounds} playTrack={playTrack} />
+        <DrumPad power={power} soundsArray={sounds} playTrack={playTrack} />
         <DrumControl
+          power={power}
+          powerSwitch={powerSwitch}
           soundTitle={trackName || soundsName[soundGroupName]}
           changeSoundGroup={changeSoundGroup}
           volume={volume}
