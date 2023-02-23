@@ -121,8 +121,8 @@ function App() {
   ];
 
   const soundsName = {
-    audioKeys1: "Heater Kit",
-    audioKeys2: "Smooth Piano Kit",
+    heaterKit: "Heater Kit",
+    smoothPianoKit: "Smooth Piano Kit",
   };
 
   const soundsGroup = {
@@ -130,10 +130,13 @@ function App() {
     smoothPianoKit: audioKeys2,
   };
 
+  const [volume, setVolume] = useState(1);
   const [soundGroupName, setSoundGroupName] = useState("heaterKit");
   const [sounds, setSounds] = useState(soundsGroup[soundGroupName]);
+  const [trackName, setTrackName] = useState("");
 
   const changeSoundGroup = () => {
+    setTrackName("");
     if (soundGroupName === "heaterKit") {
       setSounds(soundsGroup.smoothPianoKit);
       setSoundGroupName("smoothPianoKit");
@@ -143,11 +146,27 @@ function App() {
     }
   };
 
+  const playTrack = (track, trackName) => {
+    setTrackName(trackName);
+    track.volume = volume;
+    track.currentTime = 0;
+    track.play();
+  };
+
+  const handleVolumeChange = (event) => {
+    setVolume(event.target.value);
+  };
+
   return (
     <div className="App">
       <div id="drum-machine">
-        <DrumPad soundsArray={sounds} />
-        <DrumControl changeSoundGroup={changeSoundGroup} />
+        <DrumPad soundsArray={sounds} playTrack={playTrack} />
+        <DrumControl
+          soundTitle={trackName || soundsName[soundGroupName]}
+          changeSoundGroup={changeSoundGroup}
+          volume={volume}
+          handleVolumeChange={handleVolumeChange}
+        />
       </div>
     </div>
   );

@@ -1,37 +1,27 @@
 import React, { useRef, useState } from "react";
 
-function DrumKey(props) {
-  const [isActive, setIsActive] = useState(false);
-  const audioRef = useRef(null);
-
-  const toggleActivity = () => {
-    setIsActive(!isActive);
-  };
+function DrumKey({ playTrack, trackName, keyCode, audioKey, sound }) {
+  const audioRef = useRef();
 
   const handleClick = () => {
-    audioRef.current.play();
+    playTrack(audioRef.current, trackName);
   };
 
   const handleKeydown = (event) => {
-    if (event.keyCode === props.keyCode) {
+    if (event.keyCode === keyCode) {
       handleClick();
     }
   };
 
   React.useEffect(() => {
     document.addEventListener("keydown", handleKeydown);
-  }, []);
+  }, [handleKeydown]);
 
   return (
     <div>
-      <audio
-        ref={audioRef}
-        src={props.sound}
-        className="clip"
-        id={props.audioKey}
-      />
-      <button id="drum-key" className="drum-key" onClick={handleClick}>
-        {props.audioKey}
+      <audio ref={audioRef} src={sound} className="clip" id={trackName} />
+      <button id="drum-key" className="drum-key" onClick={() => handleClick()}>
+        {audioKey}
       </button>
     </div>
   );
