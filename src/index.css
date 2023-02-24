@@ -6,8 +6,9 @@
 
 :root {
   --main-color: rgb(230, 165, 191);
-  --drum-background: #d8d0d0c7;
+  --drum-background: #e7e1e18d;
   --app-background: rgb(193, 195, 223);
+  --text-color: rgb(240, 223, 223);
 }
 
 body {
@@ -82,10 +83,25 @@ div {
   display: block;
 }
 
+.title {
+  margin-bottom: 20px;
+  text-align: center;
+  color: var(--main-color);
+  text-shadow: 0px 1px 2px #222;
+}
+
+.controlTitle {
+  font-size: 30px;
+  margin-top: 10px;
+  color: var(--text-color);
+  text-shadow: 0px 0px 2px #000000;
+}
+
 .controleBlock {
   display: flex;
   flex-direction: column;
   border-radius: 5px;
+  background-color: rgba(159, 147, 147, 0.41);
 }
 
 .controle {
@@ -93,19 +109,25 @@ div {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  margin-bottom: 10px;
+  padding: 10px;
 }
 
 .leftCol,
 .rightCol {
   display: flex;
+  align-items: center;
+  justify-content: center;
   flex-direction: column;
   margin: 5px 10px;
 }
 
 .changeSoundGroup,
-.power {
-  background-color: #333;
-  color: #fff;
+.powerButtonActive,
+.powerButtonInactive {
+  width: 150px;
+  background-color: #2c2828;
+  color: var(--text-color);
   margin: 5px;
   padding: 10px 20px;
   border-radius: 5px;
@@ -115,9 +137,8 @@ div {
   box-shadow: black 1px 1px 1px;
 }
 
-.changeSoundGroup:hover,
-.power:hover {
-  background-color: #222;
+.changeSoundGroup:hover {
+  background-color: #ccacac;
 }
 
 #display {
@@ -132,6 +153,18 @@ div {
 
 .volumeTitle {
   margin: 10px 0px 5px;
+}
+
+.powerButtonInactive {
+  width: 100px;
+  background-color: rgb(86, 42, 42);
+  border: 1px solid rgb(191, 75, 75);
+}
+
+.powerButtonActive {
+  width: 100px;
+  background-color: rgb(48, 92, 50);
+  border: 1px solid rgb(75, 191, 104);
 }
 
 .volumeInput {
@@ -178,4 +211,17 @@ div {
   height: 10px;
   background-color: var(--main-color);
   border-radius: 5px;
+}
+
+.myFooter {
+  /* color: #333; */
+  font-size: 12px;
+  text-align: end;
+  margin: 5px;
+  /* width: 100vw; */
+}
+
+a {
+  text-decoration: none;
+  color: black;
 }

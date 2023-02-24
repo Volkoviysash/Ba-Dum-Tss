@@ -10,11 +10,14 @@ const DrumControl = ({
 }) => {
   return (
     <div className="controleBlock">
-      <h2>Drum Control</h2>
+      <h2 className="controlTitle">Drum Control</h2>
       <div className="controle">
         <div className="leftCol">
-          <button className="power" onClick={powerSwitch}>
-            {power ? "Power OFF" : "Power ON"}
+          <button
+            className={power ? "powerButtonActive" : "powerButtonInactive"}
+            onClick={powerSwitch}
+          >
+            {power ? "Power ON" : "Power OFF"}
           </button>
           <button className="changeSoundGroup" onClick={changeSoundGroup}>
             Change sounds group

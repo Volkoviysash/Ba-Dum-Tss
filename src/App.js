@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import DrumControl from "./Components/DrumControl";
 import DrumPad from "./Components/DrumPad";
+import MyFooter from "./Components/MyFooter";
 import "./index.css";
 
 function App() {
@@ -138,7 +139,6 @@ function App() {
 
   const powerSwitch = () => {
     setPower(!power);
-    console.log(power);
   };
 
   const changeSoundGroup = () => {
@@ -167,6 +167,7 @@ function App() {
     <div className="App">
       <div id="drum-machine">
         <DrumPad power={power} soundsArray={sounds} playTrack={playTrack} />
+        <MyFooter />
         <DrumControl
           power={power}
           powerSwitch={powerSwitch}

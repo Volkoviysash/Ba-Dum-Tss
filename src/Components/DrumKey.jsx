@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef } from "react";
 
 function DrumKey({ playTrack, trackName, keyCode, audioKey, sound }) {
   const audioRef = useRef();
