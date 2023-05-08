@@ -1,70 +1,21 @@
-# Getting Started with Create React App
+<div align='center'>
+  <h1>Drum Pad App</h1>
+</div>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h2>About the project</h2>
 
-## Available Scripts
+  <p>This web drum pad app is a fantastic tool for both aspiring and seasoned drummers to practice their skills and explore different sounds. With its intuitive user interface, I can easily create beats and rhythms by simply clicking on the various virtual pads on the screen. The app offers a range of pre-loaded drum kits with different sounds and effects to choose from, and I can also customize my own drum kits to suit my unique preferences. Additionally, the app allows me to record and save my creations, enabling me to listen back and refine my work. Overall, my web drum pad app is a fun and user-friendly way for drummers to hone their craft and experiment with different sounds and rhythms.</p>
 
-In the project directory, you can run:
+👉 Live Demo: <a href='*'>Live Demo</a>
 
-### `npm start`
+<h3>Build with:</h3>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+» React JS <br>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+<h2>Screenshots of the Project 📸</h2>
+<br>
+<h3 align='center'>Drum Pad</h3>
+ <img src='https://user-images.githubusercontent.com/90283311/236709228-a69314cf-97df-47c5-88e7-d10105492089.png' />
+ <h3 align='center'>Ba dum tss..</h3>
+ <img src='https://user-images.githubusercontent.com/90283311/236709234-d84396fe-991b-418c-bff5-ec50440c0115.png' />
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
